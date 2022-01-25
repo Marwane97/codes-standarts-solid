@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  php:
+    container_name: codes-standarts-fpm
+    build: docker/php
+    working_dir: /var/www/app
+    volumes:
+      - ./:/var/www/app
+    networks:
+      - codes-standarts-network
+
+networks:
+  codes-standarts-network:
